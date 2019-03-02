@@ -36,7 +36,7 @@ public class HttpUtils {
                 .setSocketTimeout(5000)
                 .setRedirectsEnabled(true)
                 .build();
-        HttpGet httpGet = new HttpGet();
+        HttpGet httpGet = new HttpGet(url);
         httpGet.setConfig(requestConfig);
 
         try {
@@ -75,10 +75,10 @@ public class HttpUtils {
                 .setSocketTimeout(timeout)
                 .setRedirectsEnabled(true)
                 .build();
-        HttpPost httpPost = new HttpPost();
+        HttpPost httpPost = new HttpPost(url);
         httpPost.setConfig(requestConfig);
         httpPost.setHeader("Content-Type", "text/html; chartset=UTF-8");
-        if (data != null && date instanceof String) {
+        if (data != null && data instanceof String) {
             StringEntity stringEntity = new StringEntity(data, "UTF-8");
             httpPost.setEntity(stringEntity);
         }

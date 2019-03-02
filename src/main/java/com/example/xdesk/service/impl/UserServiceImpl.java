@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private WeChatConfig weChatConfig;
-    https://open.weixin.qq.com/connect/qrconnect?appid=wx2a6cf9373f278ed2&redirect_uri=http%3A%2F%2Fxdclasstest.ngrok.xiaomiqiu.cn%2Fapi%2Fv1%2Fwechat%2Fuser%2Fcallback&response_type=code&scope=snsapi_login&state=http://www.baidu.com#wechat_redirect
+    //https://open.weixin.qq.com/connect/qrconnect?appid=wx2a6cf9373f278ed2&redirect_uri=http%3A%2F%2Fxdclasstest.ngrok.xiaomiqiu.cn%2Fapi%2Fv1%2Fwechat%2Fuser%2Fcallback&response_type=code&scope=snsapi_login&state=http://www.baidu.com#wechat_redirect
     @Autowired
     private UserMapper userMapper;
 
@@ -74,4 +74,6 @@ public class UserServiceImpl implements UserService{
         return user;
 
     }
+
+
 }

@@ -9,4 +9,6 @@ public interface VideoService {
     List<Video> getAll();
 
     int update(Video video);
+
+    Video findById(int videoId);
 }

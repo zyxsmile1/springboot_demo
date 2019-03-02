@@ -23,4 +23,10 @@ public class VideoServiceImpl implements VideoService{
     public int update(Video video) {
         return videoMapper.update(video);
     }
+
+    @Override
+    public Video findById(int videoId) {
+
+        return videoMapper.findById(videoId);
+    }
 }

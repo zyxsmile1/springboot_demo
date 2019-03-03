@@ -30,8 +30,8 @@ public class CommonUtils {
 
         try {
             MessageDigest md5 = MessageDigest.getInstance("MD5");
-            byte[] digest = md5.digest(data.getBytes("UTF-8");
-            StringBuffer sb = new StringBuffer();
+            byte[] digest = md5.digest(data.getBytes("UTF-8"));
+            StringBuilder sb = new StringBuilder();
             for (byte item : digest) {
                 sb.append(Integer.toHexString((item & 0xFF) | 0x100).substring(1, 3));
             }
